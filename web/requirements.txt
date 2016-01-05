@@ -1,4 +1,3 @@
-twilio
 Flask-WTF
 rauth
 boto
