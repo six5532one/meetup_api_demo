@@ -1,0 +1,33 @@
+{
+  "Statement": [
+    {
+      "Sid": "QueueAccess",
+      "Action": [
+        "sqs:ChangeMessageVisibility",
+        "sqs:DeleteMessage",
+        "sqs:ReceiveMessage"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+      "Sid": "MetricsAccess",
+      "Action": [
+        "cloudwatch:PutMetricData"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
+    },
+    {
+        "Sid": "DynamoPeriodicTasks",
+        "Action": [
+            "dynamodb:GetItem",
+            "dynamodb:GetTable"
+        ],
+        "Effect": "Allow",
+        "Resource": [
+            "arn:aws:dynamodb:*:769627969596:table/phonenums"
+        ]
+    }
+  ]
+}
