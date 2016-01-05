@@ -1,0 +1,6 @@
+twilio
+Flask-WTF
+rauth
+boto
+Flask==0.10.0
+requests==1.2.3

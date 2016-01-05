@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>serendipity</h1>
+<form action="" method="post" name="phone">
+{{ form.hidden_tag() }}
+<p>
+Hi {{name}}! The last step is to enter your phone number in this format: [country code][subscriber number including area code]<br>
+{{ form.phone(size=14) }}<br>
+</p>
+<p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <title>serendipity</title>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/app.css" />
+  </head>
+  <body>
+    <div class="navbar  navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">serendipity</a>
+          {% if current_user %}
+          <ul class="nav nav-list">
+            <li class="active"><a href="/signout">sign out<i class="icon-eject"></i></a></li>
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hero-unit">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endwith %}
+        {% block body %} {% endblock %}
+    </div>
+  </body>
+</html>
