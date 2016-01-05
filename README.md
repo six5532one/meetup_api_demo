@@ -1,4 +1,4 @@
-What if you could find Meetups without looking for them?
+What if you could find [Meetups](http://www.meetup.com/) without looking for them?
 
 The places we visit are a part of our lifestyle and people who visit the same places share interests. There are Meetups happening at some of the places you already visit, that may be just right for you.
 
